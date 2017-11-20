@@ -15,7 +15,7 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-        'Test/**/*.js'
+        'test/**/*.js'
     ],
 
 
@@ -79,10 +79,10 @@ module.exports = function(config) {
         module: {
             loaders: [{
                 test: /\.js$/,
-                loader: 'babel',
+                loader: 'babel-loader',
                 exclude: /node_modules/,
                 query:{
-                    presets: ['es2015']
+                    presets: ['es2015', 'react']
                 }
             }]
         }
